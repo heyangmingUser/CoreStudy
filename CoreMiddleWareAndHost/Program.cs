@@ -103,7 +103,8 @@ namespace CoreMiddleWareAndHost
 
             var host8 = new HostBuilder().UseHostedService<TimeHostedService>().Build();
             //使用服务容器工厂并为"应用"配置自定义服务容器
-            var host7 = new HostBuilder().UseServiceProviderFactory(new ServiceContainerFactory()).ConfigureContainer<ServiceContainer>((hostContext, container) => { });
+            var host7 = new HostBuilder().UseServiceProviderFactory(new ServiceContainerFactory())
+                .ConfigureContainer<ServiceContainer>((hostContext, container) => { });
 
             var host10 = new HostBuilder().Build();
         }
