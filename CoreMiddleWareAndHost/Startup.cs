@@ -65,6 +65,9 @@ namespace CoreMiddleWareAndHost
 
             app.MapWhen(context => context.Request.Query.ContainsKey("branch"), HandleBrabch);
 
+            //调用自定义编写的中间件
+            app.UseRequestCulture();
+
         }
     }
 }
