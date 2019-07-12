@@ -32,7 +32,7 @@ namespace CoreWebServerAndConfiguration
             //什么是终结点:将
             options.ConfigurationLoader.Endpoint("https", opt => { opt.HttpsOptions.SslProtocols = SslProtocols.Ssl2; });
 
-            options.Configure(context.Configuration.GetSection("Kestrel")).Endpoint("https", opt => { opt.HttpsOptions.SslProtocols = SslProtocols.Ssl2; })
+            options.Configure(context.Configuration.GetSection("Kestrel")).Endpoint("https", opt => { opt.HttpsOptions.SslProtocols = SslProtocols.Ssl2; });
         })
             .UseKestrel(option =>
             {
